@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Red Wine Quality Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Fixed Acidity" placeholder="Fixed Acidity" required="required" /><br>
+    	<input type="text" name="Volatile Acidity" placeholder="Volatile Acidity" required="required" /><br>
+        <input type="text" name="Citric Acid" placeholder="Citric Acid" required="required" /><br>
+        <input type="text" name="Residual Sugar" placeholder="Residual Sugar" required="required" /><br>
+        <input type="text" name="Chlorides" placeholder="Chlorides" required="required" /><br>
+        <input type="text" name="Free Sulfur Dioxide" placeholder="Free Sulfur Dioxide" required="required" /><br>
+        <input type="text" name="Total Sulfur Dioxide" placeholder="Total Sulfur Dioxide" required="required" /><br>
+        <input type="text" name="Density" placeholder="Density" required="required" /><br>
+        <input type="text" name="pH" placeholder="pH" required="required" /><br>
+        <input type="text" name="Sulphates" placeholder="Sulphates" required="required" /><br>
+        <input type="text" name="Alcohol" placeholder="Alcohol" required="required" /><br>
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Wine Quality</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
